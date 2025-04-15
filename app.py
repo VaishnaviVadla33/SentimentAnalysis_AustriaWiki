@@ -13,11 +13,11 @@ st.set_page_config(
 # Load saved model and resources
 @st.cache_resource
 def load_model():
-    with open("sentiment_model/best_model.pkl", "rb") as f:
+    with open("best_model.pkl", "rb") as f:
         model_data = pickle.load(f)
-    with open("sentiment_model/tfidf_vectorizer.pkl", "rb") as f:
+    with open("tfidf_vectorizer.pkl", "rb") as f:
         vectorizer = pickle.load(f)
-    with open("sentiment_model/class_names.pkl", "rb") as f:
+    with open("class_names.pkl", "rb") as f:
         class_names = pickle.load(f)
     return model_data, vectorizer, class_names
 
